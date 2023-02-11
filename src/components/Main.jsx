@@ -7,7 +7,7 @@ import Card from "./Card"
 
 const Main = () => {
   return (
-    <div className={MainStyle.card-container}>
+    <div className={MainStyle.cardContainer}>
         {data.map((e)=><Card {...e}/>)}      
     </div>
   )

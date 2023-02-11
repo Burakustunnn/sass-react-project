@@ -1,12 +1,13 @@
-import "../scss/Card.module.scss"
+import CardStyle from "../scss/Card.module.scss"
 
 const Card = (props) => {
     const {title,image,desc,id}=props
   return (
-    <div className="cards">
+    <div className={CardStyle.cards}>
       <div>
-        <h1>{title}</h1>
+        <h1 className={CardStyle.title}>{title}</h1>
       </div>
+      
       <img src={image} alt="" />
       <div className="card-over">
         <p>{desc}</p>
