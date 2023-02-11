@@ -1,4 +1,4 @@
-@import "./variables";
+@import "./variables", "./mixins";
 
 .cards {
     background-color: beige;
@@ -27,6 +27,7 @@
         &:hover{
             filter: grayscale(100); // uzerine geldiğinde resmin rengini soluklaştır
         }
+        
     }
     .cardOver{
         // color: rgb(28, 111, 184);
