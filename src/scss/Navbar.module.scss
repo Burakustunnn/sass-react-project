@@ -1,20 +1,37 @@
-@import "./variables";
+@import "./variables","./mixins";
 
 .navbar{
     display: flex;
     justify-content: space-evenly;
+    // background-color: $color-5;
 
     a{
         color: $color-1;
         text-decoration: none;
         font-size: 1.8rem;
         padding: 1rem;
+        font-weight: 900;
         &:hover{
             color: $color-2;
+            // border-left:1px solid $color-1;
+            // border-right:1px solid $color-1;
+            box-shadow:7px 3px 10px $color-1;
+            border-radius: 25px;
+
         }
     }
+}
+@include media-xsm{
+    .navbar{
+        flex-direction: column;
+        text-align: center;
 
+    }
+}
+@include media-sm{
+    .navbar{
+        flex-direction: row;
+        text-align: center;
 
-
-
+    }
 }

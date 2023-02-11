@@ -8,7 +8,7 @@
     box-shadow: 7px 7px 7px rgba(255, 0, 0, 0.418);
     position: relative;
     overflow: hidden;
-    &:hover{
+    &:hover .cardOver{
         transform: translateY(0%);
 
     }
@@ -16,26 +16,29 @@
         color: $color-3;
         font-size: 1rem;
         padding: 1rem;
+        text-align: center;
     }
 
-    img{
+    .CardImg{
         width: 500px;
         height: 350px;
+        object-fit: cover; // resmi çerceveye sığdırıyor kendi ayarlıyor- farklı resimler olduğu için burdan yaptığımızda hepsini o bencereye oturtur
         filter: grayscale(0);
         &:hover{
-            filter: grayscale(100);
+            filter: grayscale(100); // uzerine geldiğinde resmin rengini soluklaştır
         }
     }
-    .card-over{
+    .cardOver{
         // color: rgb(28, 111, 184);
+        color: wheat;
         position: absolute;
         bottom: 0;
         left: 0;
         font-size: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.301);
+        background-color: rgba(0,0 , 0, 0.5);
         padding: 1rem;
         transform: translateY(100%);
-        z-index: 1;
+        z-index:1;
         transition: transform 0.7s ease-in-out;
         
     }
